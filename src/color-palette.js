@@ -43,10 +43,10 @@ function getColorRows(combos, onColorSuggestion) {
 			Sample Text
 		</td>
 		<td>
-			{ contrast >= 4.5 ? '\u2714' : '\u2718'}
+			{ `${(contrast >= 4.5 ? '\u2714' : '\u2718')}  (${contrast.toFixed(2)}:1)` }
 		</td>
 		<td>
-			{ contrast >= 3.0 ? '\u2714' : '\u2718'}
+			{ `${(contrast >= 3.0 ? '\u2714' : '\u2718')}  (${contrast.toFixed(2)}:1)` }
 		</td>
                 <td>
                         { contrast >= 3.0 && contrast < 4.5 ?
@@ -89,8 +89,7 @@ const ColorPalette = ({ colors, className, onColorSuggestion }) => {
 		return (<p>Add some colours!</p>);
 	}
   return <div className={`${className}`}>
-  	<table>
-  		<caption>Color Palette Analysis</caption>
+  	<table summary='Color Palette Analysis'>
   		<thead>
 	  		<tr>
 	  			<th scope="col">
