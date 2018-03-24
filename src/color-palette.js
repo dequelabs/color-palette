@@ -60,8 +60,9 @@ function getColorRows(combos, onColorSuggestion) {
 function generateSuggestedSwatch(fgColor, bgColor, onColorSuggestion) {
   let suggestedColors = suggestColors(bgColor, fgColor, { AA: 4.5 })['AA'];
   let bgColorHex = bgColor.toHexString();
-  if (suggestedColors.bg !== bgColorHex)
+  if (suggestedColors.bg !== bgColorHex) {
     return '';
+  }
   let fgColorHex = fgColor.toHexString();
   console.log(suggestedColors);
   return <button style={{ color: suggestedColors.fg,  backgroundColor: suggestedColors.fg }}
