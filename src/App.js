@@ -12,12 +12,6 @@ class App extends Component {
     };
 
     this.addColor = this.addColor.bind(this);
-    this.doStuff = this.doStuff.bind(this);
-  }
-
-  doStuff(e) {
-    e.preventDefault();
-    this.setState({ colorArray : this.textArea.value.split('\n') });
   }
 
   render() {
