@@ -1,48 +1,60 @@
 import React, { Component } from 'react';
-import ColorPalette from './color-palette.js'
+import { Workspace, Button } from 'cauldron-react';
+import ColorPalette from './color-palette'
+import SelectedColors from './SelectedColors/';
 import './App.css';
 
 class App extends Component {
-  constructor (props) {
-    super(props);
+  constructor() {
+    super();
+    this.state = {
+      colorArray : []
+    };
+
+    this.addColor = this.addColor.bind(this);
     this.doStuff = this.doStuff.bind(this);
-    this.state ={ colorArray : ['5C9A1B',
-              '40752d',
-              'aa005f',
-              'd5d5d2',
-              '1a1812',
-              '000000',
-              'FFFFFF'] };
   }
 
   doStuff(e) {
-    this.setState({ colorArray : this.textArea.value.split('\n') });
-    console.log(this.state.colorArray);
     e.preventDefault();
+    this.setState({ colorArray : this.textArea.value.split('\n') });
   }
 
   render() {
     const { colorArray } = this.state;
     return (
       <div className="App">
-        <header className="App-header">
+        <div className='dqpl-top-bar'>
           <h1 className="App-title">Color Palette Contrast Tester</h1>
-        </header>
-        <main>
-
-          <form>
-            <textarea id="colors" rows='5' ref={ el => this.textArea = el }>
-              {colorArray.join('\n')}
-            </textarea>
-            <button onClick={ this.doStuff }>
-              Generate Palette
-            </button>
+        </div>
+        <Workspace>
+          <form className='any-colour-you-like' onSubmit={this.addColor}>
+            <div className='dqpl-field-wrap'>
+              <label className='dqpl-label' htmlFor='add-color'>Color (hex)</label>
+              <input
+                type='text'
+                id='add-color'
+                className='dqpl-text-input'
+                ref={el => this.input = el}
+              />
+            </div>
+            <Button type='submit'>Add color</Button>
           </form>
-          <ColorPalette colors={colorArray}>
-          </ColorPalette>
-        </main>
+          <SelectedColors colors={colorArray} />
+          <ColorPalette colors={colorArray} />
+        </Workspace>
       </div>
     );
+  }
+
+  addColor(e) {
+    e.preventDefault();
+    const { colorArray } = this.state;
+    const updatedColorArray = colorArray.slice();
+
+    updatedColorArray.push(this.input.value);
+
+    this.setState({ colorArray: updatedColorArray });
   }
 }
 
