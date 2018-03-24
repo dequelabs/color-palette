@@ -2021,7 +2021,7 @@ depd@~1.1.1, depd@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
 
-deque-pattern-library@^2.4.0, deque-pattern-library@^2.4.3:
+deque-pattern-library@^2.4.0:
   version "2.4.3"
   resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/deque-pattern-library/-/deque-pattern-library-2.4.3.tgz#3b996d7a70a048d91a7d0c841915fe10de4c8e97"
 
@@ -6061,6 +6061,10 @@ restore-cursor@^2.0.0:
 ret@~0.1.10:
   version "0.1.15"
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
+
+rgb-hex@^2.1.0:
+  version "2.1.0"
+  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/rgb-hex/-/rgb-hex-2.1.0.tgz#c773c5fe2268a25578d92539a82a7a5ce53beda6"
 
 right-align@^0.1.1:
   version "0.1.3"

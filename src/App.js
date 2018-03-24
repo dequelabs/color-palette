@@ -28,7 +28,7 @@ class App extends Component {
 
     const initialColors = localStorage.getItem('colorArray');
     this.state = {
-      colorArray : initialColors && JSON.parse(initialColors) || []
+      colorArray : (initialColors && JSON.parse(initialColors)) || []
     };
 
     this.addColor = this.addColor.bind(this);
@@ -55,8 +55,8 @@ class App extends Component {
                 aria-describedby='error'
               />
               <div id='error' className='dqpl-error-wrap'>{ this.state.error }</div>
+              <Button type='submit'>Add color</Button>
             </div>
-            <Button type='submit'>Add color</Button>
           </form>
           <SelectedColors colors={colorArray} onTrash={this.removeColor} />
           <ColorPalette colors={colorArray} onColorSuggestion={this.onColorSuggestion}/>

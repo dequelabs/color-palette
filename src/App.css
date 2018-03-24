@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+.dqpl-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .App-header {
   background-color: #222;
   height: 50px;
@@ -11,6 +17,9 @@
 
 .App-title {
   font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
 }
 
 .App-intro {
