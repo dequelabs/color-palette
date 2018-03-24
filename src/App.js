@@ -33,6 +33,7 @@ class App extends Component {
 
     this.addColor = this.addColor.bind(this);
     this.removeColor = this.removeColor.bind(this);
+    this.onColorSuggestion = this.onColorSuggestion.bind(this);
   }
 
   render() {
@@ -58,7 +59,7 @@ class App extends Component {
             <Button type='submit'>Add color</Button>
           </form>
           <SelectedColors colors={colorArray} onTrash={this.removeColor} />
-          <ColorPalette colors={colorArray} />
+          <ColorPalette colors={colorArray} onColorSuggestion={this.onColorSuggestion}/>
         </Workspace>
       </div>
     );
@@ -93,6 +94,16 @@ class App extends Component {
 
     this.setState({ colorArray: updatedColorArray });
     localStorage.setItem('colorArray', JSON.stringify(updatedColorArray));
+  }
+
+  onColorSuggestion(oldColor, newColor) {
+    const { colorArray } = this.state;
+    let updatedColorArray = colorArray.slice();
+    // TODO: no need to remove '#' if we store hex colors directly
+    oldColor = oldColor.substring(1);
+    newColor = newColor.substring(1);
+    updatedColorArray.splice(updatedColorArray.indexOf(oldColor), 1, newColor);
+    this.setState({ colorArray: updatedColorArray });
   }
 }
 
