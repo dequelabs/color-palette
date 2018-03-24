@@ -105,7 +105,11 @@ class App extends Component {
     // TODO: no need to remove '#' if we store hex colors directly
     oldColor = oldColor.substring(1);
     newColor = newColor.substring(1);
-    updatedColorArray.splice(updatedColorArray.indexOf(oldColor), 1, newColor);
+    if (updatedColorArray.includes(newColor)) {
+       updatedColorArray.splice(updatedColorArray.indexOf(oldColor), 1);
+    } else {
+       updatedColorArray.splice(updatedColorArray.indexOf(oldColor), 1, newColor);
+    }
     this.setState({ colorArray: updatedColorArray });
     localStorage.setItem('colorArray', JSON.stringify(updatedColorArray));
   }
