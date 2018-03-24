@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "a11y-color": "0.0.8",
+    "react-axe": "^2.1.9",
     "rgb-hex": "^2.1.0"
   }
 }

@@ -28,9 +28,33 @@
 
 .any-colour-you-like {
   text-align: left;
-  padding: 2em 1em;
+  padding: 2em 1em 0 1em;
+  display:flex;
+  /*align-items:flex-center;*/
+  justify-content:center;
 }
 
 .any-colour-you-like button {
   margin: 0;
+  margin-left:20px;
+}
+
+.any-colour-you-like .dqpl-label.inline {
+  margin-right:20px;
+}
+
+.any-colour-you-like > .dqpl-field-wrap {
+  display:flex;
+  margin-bottom:0;
+}
+
+.any-colour-you-like > .dqpl-field-wrap > .dqpl-label {
+  margin-top:8px;
+}
+.inline {
+  display: inline-block;
+}
+
+.dqpl-field-wrap.inline {
+  margin-bottom:0;
 }
