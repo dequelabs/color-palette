@@ -38,6 +38,7 @@ class App extends Component {
 
   render() {
     const { colorArray } = this.state;
+
     return (
       <div className="App">
         <div className='dqpl-top-bar'>
@@ -58,7 +59,11 @@ class App extends Component {
               <Button type='submit'>Add color</Button>
             </div>
           </form>
-          <SelectedColors colors={colorArray} onTrash={this.removeColor} />
+          <SelectedColors
+            colors={colorArray}
+            onTrash={this.removeColor}
+            focusInput={() => this.input.focus()}
+          />
           <ColorPalette colors={colorArray} onColorSuggestion={this.onColorSuggestion}/>
         </Workspace>
       </div>
