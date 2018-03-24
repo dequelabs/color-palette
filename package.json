@@ -16,6 +16,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "a11y-color": "0.0.8",
     "rgb-hex": "^2.1.0"
   }
 }

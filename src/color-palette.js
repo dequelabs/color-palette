@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
+import {suggestColors} from 'a11y-color';
 var axe = require('axe-core');
 
 function getColor(hex) {
@@ -28,12 +29,12 @@ function getColor(hex) {
 	return new axe.commons.color.Color(red, green, blue, 1);
 }
 
-function getColorRows(combos) {
-	return combos.map((combo) => {
+function getColorRows(combos, onColorSuggestion) {
+	return combos.map((combo, i) => {
 		var fgColor = getColor(combo[0]);
 		var bgColor = getColor(combo[1]);
 		var contrast = axe.commons.color.getContrast(bgColor, fgColor);
-		return <tr>
+		return <tr key={ i }>
 		<td style={{ backgroundColor: '#' + combo[0]}}>
 		</td>
 		<td style={{ backgroundColor: '#' + combo[1]}}>
@@ -47,11 +48,28 @@ function getColorRows(combos) {
 		<td>
 			{ contrast >= 3.0 ? '\u2714' : '\u2718'}
 		</td>
+                <td>
+                        { contrast >= 3.0 && contrast < 4.5 ?
+                          generateSuggestedSwatch(fgColor, bgColor, onColorSuggestion) :
+                          "" }
+                </td>
 		</tr>
 	});
 }
 
-const ColorPalette = ({ colors, className }) => {
+function generateSuggestedSwatch(fgColor, bgColor, onColorSuggestion) {
+  let suggestedColors = suggestColors(bgColor, fgColor, { AA: 4.5 })['AA'];
+  let bgColorHex = bgColor.toHexString();
+  if (suggestedColors.bg !== bgColorHex) {
+    return '';
+  }
+  let fgColorHex = fgColor.toHexString();
+  console.log(suggestedColors);
+  return <button style={{ color: suggestedColors.fg,  backgroundColor: suggestedColors.fg }}
+                 onClick={() => onColorSuggestion(fgColorHex, suggestedColors.fg)}>@@</button>
+}
+
+const ColorPalette = ({ colors, className, onColorSuggestion }) => {
 	let combos = [];
 	let i, j;
 	for (i = 0; i < colors.length - 1; i++) {
@@ -59,7 +77,7 @@ const ColorPalette = ({ colors, className }) => {
 			combos.push([colors[i], colors[j]]);
 		}
 	}
-	const colorRows = getColorRows(combos);
+	const colorRows = getColorRows(combos, onColorSuggestion);
 	if (colors.length < 2) {
 		return (<p>Add some colours!</p>);
 	}
@@ -99,7 +117,8 @@ ColorPalette.defaultProps = {
 
 ColorPalette.propTypes = {
 	colors:PropTypes.array,
-  className: PropTypes.string
+  className: PropTypes.string,
+  onColorSuggestion: PropTypes.func
 };
 
 export default ColorPalette;
