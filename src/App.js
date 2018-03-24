@@ -46,17 +46,20 @@ class App extends Component {
         <Workspace>
           <form className='any-colour-you-like' onSubmit={this.addColor}>
             <div className='dqpl-field-wrap'>
-              <label className='dqpl-label' htmlFor='add-color'>Color (hex)</label>
-              <input
-                type='text'
-                id='add-color'
-                className='dqpl-text-input'
-                ref={el => this.input = el}
-                aria-describedby='error'
-              />
-              <div id='error' className='dqpl-error-wrap'>{ this.state.error }</div>
-              <Button type='submit'>Add color</Button>
+              <label className='dqpl-label inline' htmlFor='add-color'>Color (hex or rgb)</label>
+              <div className='dqpl-field-wrap inline'>
+                <input
+                  type='text'
+                  id='add-color'
+                  className='dqpl-text-input'
+                  ref={el => this.input = el}
+                  aria-describedby='error'
+                  placeholder='#ffffff or rgb(256,256,256)'
+                />
+                <div id='error' className='dqpl-error-wrap'>{ this.state.error }</div>
+              </div>
             </div>
+            <Button type='submit' className='submit'>Add color</Button>
           </form>
           <SelectedColors colors={colorArray} onTrash={this.removeColor} />
           <ColorPalette colors={colorArray} onColorSuggestion={this.onColorSuggestion}/>
