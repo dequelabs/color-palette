@@ -7,17 +7,14 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
+
+    const initialColors = localStorage.getItem('colorArray');
     this.state = {
-      colorArray : []
+      colorArray : initialColors && JSON.parse(initialColors) || []
     };
 
     this.addColor = this.addColor.bind(this);
-    this.doStuff = this.doStuff.bind(this);
-  }
-
-  doStuff(e) {
-    e.preventDefault();
-    this.setState({ colorArray : this.textArea.value.split('\n') });
+    this.removeColor = this.removeColor.bind(this);
   }
 
   render() {
@@ -40,7 +37,7 @@ class App extends Component {
             </div>
             <Button type='submit'>Add color</Button>
           </form>
-          <SelectedColors colors={colorArray} />
+          <SelectedColors colors={colorArray} onTrash={this.removeColor} />
           <ColorPalette colors={colorArray} />
         </Workspace>
       </div>
@@ -53,8 +50,18 @@ class App extends Component {
     const updatedColorArray = colorArray.slice();
 
     updatedColorArray.push(this.input.value);
+    this.setState({ colorArray: updatedColorArray });
+    localStorage.setItem('colorArray', JSON.stringify(updatedColorArray));
+    this.input.value = '';
+  }
+
+  removeColor(index) {
+    const { colorArray } = this.state;
+    const updatedColorArray = colorArray.slice();
+    updatedColorArray.splice(index, 1);
 
     this.setState({ colorArray: updatedColorArray });
+    localStorage.setItem('colorArray', JSON.stringify(updatedColorArray));
   }
 }
 
