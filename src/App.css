@@ -58,3 +58,18 @@
 .dqpl-field-wrap.inline {
   margin-bottom:0;
 }
+
+
+button.selected-color {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    color: #666;
+    font-size: 15px;
+}
+
+.swatch {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000;
+}

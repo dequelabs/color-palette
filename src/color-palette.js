@@ -64,16 +64,23 @@ function generateSuggestedSwatch(fgColor, bgColor, onColorSuggestion) {
     return '';
   }
   let fgColorHex = fgColor.toHexString();
-  console.log(suggestedColors);
-  return <button style={{ color: suggestedColors.fg,  backgroundColor: suggestedColors.fg }}
-                 onClick={() => onColorSuggestion(fgColorHex, suggestedColors.fg)}>@@</button>
+
+  return <button className='selected-color'
+                 onClick={() => onColorSuggestion(fgColorHex, suggestedColors.fg)}
+                 title={ 'Replace ' + fgColorHex + ' with ' + suggestedColors.fg }>
+           <span className='swatch'
+                 style={{ color: suggestedColors.fg,  backgroundColor: suggestedColors.fg }}></span>
+           <p>{suggestedColors.fg}</p>
+         </button>
 }
 
 const ColorPalette = ({ colors, className, onColorSuggestion }) => {
 	let combos = [];
 	let i, j;
-	for (i = 0; i < colors.length - 1; i++) {
-		for (j = i+1; j < colors.length; j++) {
+	for (i = 0; i < colors.length; i++) {
+		for (j = 0; j < colors.length; j++) {
+            if (i === j) continue;
+
 			combos.push([colors[i], colors[j]]);
 		}
 	}
@@ -100,6 +107,9 @@ const ColorPalette = ({ colors, className, onColorSuggestion }) => {
 	  			</th>
 	  			<th scope="col">
 	  				AA large font
+	  			</th>
+	  			<th scope="col">
+	  				Suggestion
 	  			</th>
 	  		</tr>
   		</thead>
