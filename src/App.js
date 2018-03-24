@@ -11,13 +11,15 @@ function normalizeColor(inputValue) {
   }
   const span = document.createElement('span');
   document.body.appendChild(span);
-  let styl = window.getComputedStyle(span);
   span.style.backgroundColor = inputValue;
+  const styl = window.getComputedStyle(span);
+  const bgcolor = styl.backgroundColor;
   if (!span.style.backgroundColor) {
+    document.body.removeChild(span);
     throw new Error('please provide a valid color string')
   }
-  styl = window.getComputedStyle(span);
-  return rgbHex(styl.backgroundColor);
+  document.body.removeChild(span);
+  return rgbHex(bgcolor);
 }
 
 class App extends Component {
