@@ -107,6 +107,7 @@ class App extends Component {
     newColor = newColor.substring(1);
     updatedColorArray.splice(updatedColorArray.indexOf(oldColor), 1, newColor);
     this.setState({ colorArray: updatedColorArray });
+    localStorage.setItem('colorArray', JSON.stringify(updatedColorArray));
   }
 }
 
