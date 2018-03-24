@@ -60,6 +60,9 @@ const ColorPalette = ({ colors, className }) => {
 		}
 	}
 	const colorRows = getColorRows(combos);
+	if (colors.length < 2) {
+		return (<p>Add some colours!</p>);
+	}
   return <div className={`${className}`}>
   	<table>
   		<caption>Color Palette Analysis</caption>

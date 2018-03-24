@@ -16,3 +16,12 @@
 .App-intro {
   font-size: large;
 }
+
+.any-colour-you-like {
+  text-align: left;
+  padding: 2em 1em;
+}
+
+.any-colour-you-like button {
+  margin: 0;
+}
