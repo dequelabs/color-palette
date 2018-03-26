@@ -4,7 +4,7 @@
 
 a11y-color@0.0.8:
   version "0.0.8"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/a11y-color/-/a11y-color-0.0.8.tgz#cf73631aebe40d7187aa781e47e619c270f35385"
+  resolved "https://registry.yarnpkg.com/a11y-color/-/a11y-color-0.0.8.tgz#cf73631aebe40d7187aa781e47e619c270f35385"
   dependencies:
     core-js "^0.9.13"
 
@@ -82,12 +82,13 @@ ajv@^5.0.0, ajv@^5.1.0, ajv@^5.1.5, ajv@^5.2.0:
     json-schema-traverse "^0.3.0"
 
 ajv@^6.0.1:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.3.0.tgz#1650a41114ef00574cac10b8032d8f4c14812da7"
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.4.0.tgz#d3aff78e9277549771daf0164cff48482b754fc6"
   dependencies:
     fast-deep-equal "^1.0.0"
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
+    uri-js "^3.0.2"
 
 align-text@^0.1.1, align-text@^0.1.3:
   version "0.1.4"
@@ -116,8 +117,8 @@ ansi-escapes@^1.4.0:
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-1.4.0.tgz#d3a8a83b319aa67793662b13e761c7911422306e"
 
 ansi-escapes@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-3.0.0.tgz#ec3e8b4e9f8064fc02c3ac9b65f1c275bda8ef92"
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-3.1.0.tgz#f73207bb81207d75fd6c83f125af26eea378ca30"
 
 ansi-html@0.0.7:
   version "0.0.7"
@@ -356,7 +357,7 @@ aws4@^1.2.1, aws4@^1.6.0:
 
 axe-core@^2.6.0:
   version "2.6.1"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/axe-core/-/axe-core-2.6.1.tgz#28772c4f76966d373acda35b9a409299dc00d1b5"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-2.6.1.tgz#28772c4f76966d373acda35b9a409299dc00d1b5"
 
 axe-core@^3.0.0:
   version "3.0.0"
@@ -1340,12 +1341,12 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000817"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000817.tgz#c9f8e236887cf60ae623d1fb1e5ec92877ab1229"
+  version "1.0.30000820"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000820.tgz#7c20e25cea1768b261b724f82e3a6a253aaa1468"
 
 caniuse-lite@^1.0.30000748, caniuse-lite@^1.0.30000792:
-  version "1.0.30000817"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000817.tgz#e993c380eb4bfe76a2aed4223f841c02d6e0d832"
+  version "1.0.30000820"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000820.tgz#6e36ee75187a2c83d26d6504a1af47cc580324d2"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -1361,7 +1362,7 @@ caseless@~0.12.0:
 
 cauldron-react@0.0.3:
   version "0.0.3"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/cauldron-react/-/cauldron-react-0.0.3.tgz#33205dc040b520efd69ff7c94b5d3fd6878842cf"
+  resolved "https://registry.yarnpkg.com/cauldron-react/-/cauldron-react-0.0.3.tgz#33205dc040b520efd69ff7c94b5d3fd6878842cf"
   dependencies:
     deque-pattern-library "^2.4.0"
     focus-trap-react "^3.0.5"
@@ -1415,8 +1416,8 @@ chokidar@^1.6.0:
     fsevents "^1.0.0"
 
 chokidar@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.0.2.tgz#4dc65139eeb2714977735b6a35d06e97b494dfd7"
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.0.3.tgz#dcbd4f6cbb2a55b4799ba8a840ac527e5f4b1176"
   dependencies:
     anymatch "^2.0.0"
     async-each "^1.0.0"
@@ -1430,7 +1431,7 @@ chokidar@^2.0.2:
     readdirp "^2.0.0"
     upath "^1.0.0"
   optionalDependencies:
-    fsevents "^1.0.0"
+    fsevents "^1.1.2"
 
 ci-info@^1.0.0:
   version "1.1.3"
@@ -1484,7 +1485,7 @@ cli-width@^2.0.0:
 
 clipboard@^1.7.1:
   version "1.7.1"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/clipboard/-/clipboard-1.7.1.tgz#360d6d6946e99a7a1fef395e42ba92b5e9b5a16b"
+  resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-1.7.1.tgz#360d6d6946e99a7a1fef395e42ba92b5e9b5a16b"
   dependencies:
     good-listener "^1.2.2"
     select "^1.1.2"
@@ -1492,7 +1493,7 @@ clipboard@^1.7.1:
 
 clipboard@^2.0.0:
   version "2.0.0"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/clipboard/-/clipboard-2.0.0.tgz#4661dc972fb72a4c4770b8db78aa9b1caef52b50"
+  resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-2.0.0.tgz#4661dc972fb72a4c4770b8db78aa9b1caef52b50"
   dependencies:
     good-listener "^1.2.2"
     select "^1.1.2"
@@ -1515,8 +1516,8 @@ cliui@^3.2.0:
     wrap-ansi "^2.0.0"
 
 clone@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.3.tgz#298d7e2231660f40c003c2ed3140decf3f53085f"
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
 
 co@^4.6.0:
   version "4.6.0"
@@ -1583,7 +1584,7 @@ combined-stream@1.0.6, combined-stream@^1.0.5, combined-stream@~1.0.5:
 
 comma-separated-tokens@^1.0.0:
   version "1.0.4"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/comma-separated-tokens/-/comma-separated-tokens-1.0.4.tgz#72083e58d4a462f01866f6617f4d98a3cd3b8a46"
+  resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-1.0.4.tgz#72083e58d4a462f01866f6617f4d98a3cd3b8a46"
   dependencies:
     trim "0.0.1"
 
@@ -1635,8 +1636,8 @@ concat-stream@^1.6.0:
     typedarray "^0.0.6"
 
 configstore@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/configstore/-/configstore-3.1.1.tgz#094ee662ab83fad9917678de114faaea8fcdca90"
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/configstore/-/configstore-3.1.2.tgz#c6f25defaeef26df12dd33414b001fe81a543f8f"
   dependencies:
     dot-prop "^4.1.0"
     graceful-fs "^4.1.2"
@@ -1697,7 +1698,7 @@ copy-descriptor@^0.1.0:
 
 core-js@^0.9.13:
   version "0.9.18"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/core-js/-/core-js-0.9.18.tgz#13f458e430232b0f4ec1f480da7c2f5288e9d095"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-0.9.18.tgz#13f458e430232b0f4ec1f480da7c2f5288e9d095"
 
 core-js@^1.0.0:
   version "1.2.7"
@@ -2021,7 +2022,7 @@ delayed-stream@~1.0.0:
 
 delegate@^3.1.2:
   version "3.2.0"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/delegate/-/delegate-3.2.0.tgz#b66b71c3158522e8ab5744f720d8ca0c2af59166"
+  resolved "https://registry.yarnpkg.com/delegate/-/delegate-3.2.0.tgz#b66b71c3158522e8ab5744f720d8ca0c2af59166"
 
 delegates@^1.0.0:
   version "1.0.0"
@@ -2037,7 +2038,7 @@ depd@~1.1.1, depd@~1.1.2:
 
 deque-pattern-library@^2.4.0:
   version "2.4.3"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/deque-pattern-library/-/deque-pattern-library-2.4.3.tgz#3b996d7a70a048d91a7d0c841915fe10de4c8e97"
+  resolved "https://registry.yarnpkg.com/deque-pattern-library/-/deque-pattern-library-2.4.3.tgz#3b996d7a70a048d91a7d0c841915fe10de4c8e97"
 
 des.js@^1.0.0:
   version "1.0.0"
@@ -2853,13 +2854,13 @@ flatten@^1.0.2:
 
 focus-trap-react@^3.0.5:
   version "3.1.2"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/focus-trap-react/-/focus-trap-react-3.1.2.tgz#4dd021ccd028bbd3321147d132cdf7585d6d1394"
+  resolved "https://registry.yarnpkg.com/focus-trap-react/-/focus-trap-react-3.1.2.tgz#4dd021ccd028bbd3321147d132cdf7585d6d1394"
   dependencies:
     focus-trap "^2.0.1"
 
 focus-trap@^2.0.1:
   version "2.4.3"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/focus-trap/-/focus-trap-2.4.3.tgz#95edc23e77829b7772cb2486d61fd6371ce112f9"
+  resolved "https://registry.yarnpkg.com/focus-trap/-/focus-trap-2.4.3.tgz#95edc23e77829b7772cb2486d61fd6371ce112f9"
   dependencies:
     tabbable "^1.0.3"
 
@@ -2933,7 +2934,7 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
 
-fsevents@^1.0.0, fsevents@^1.1.3:
+fsevents@^1.0.0, fsevents@^1.1.2, fsevents@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-1.1.3.tgz#11f82318f5fe7bb2cd22965a108e9306208216d8"
   dependencies:
@@ -3082,7 +3083,7 @@ globby@^6.1.0:
 
 good-listener@^1.2.2:
   version "1.2.2"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/good-listener/-/good-listener-1.2.2.tgz#d53b30cdf9313dffb7dc9a0d477096aa6d145c50"
+  resolved "https://registry.yarnpkg.com/good-listener/-/good-listener-1.2.2.tgz#d53b30cdf9313dffb7dc9a0d477096aa6d145c50"
   dependencies:
     delegate "^3.1.2"
 
@@ -3229,11 +3230,11 @@ hash.js@^1.0.0, hash.js@^1.0.3:
 
 hast-util-parse-selector@^2.0.0:
   version "2.1.0"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/hast-util-parse-selector/-/hast-util-parse-selector-2.1.0.tgz#b55c0f4bb7bb2040c889c325ef87ab29c38102b4"
+  resolved "https://registry.yarnpkg.com/hast-util-parse-selector/-/hast-util-parse-selector-2.1.0.tgz#b55c0f4bb7bb2040c889c325ef87ab29c38102b4"
 
 hastscript@^3.1.0:
   version "3.1.0"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/hastscript/-/hastscript-3.1.0.tgz#66628ba6d7f1ad07d9277dd09028aba7f4934599"
+  resolved "https://registry.yarnpkg.com/hastscript/-/hastscript-3.1.0.tgz#66628ba6d7f1ad07d9277dd09028aba7f4934599"
   dependencies:
     camelcase "^3.0.0"
     comma-separated-tokens "^1.0.0"
@@ -3265,7 +3266,7 @@ he@1.1.x:
 
 highlight.js@~9.12.0:
   version "9.12.0"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/highlight.js/-/highlight.js-9.12.0.tgz#e6d9dbe57cbefe60751f02af336195870c90c01e"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.12.0.tgz#e6d9dbe57cbefe60751f02af336195870c90c01e"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -3424,8 +3425,8 @@ icss-utils@^2.1.0:
     postcss "^6.0.1"
 
 ieee754@^1.1.4:
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.10.tgz#719a6f7b026831e64bdb838b0de1bb0029bbf716"
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.11.tgz#c16384ffe00f5b7835824e67b6f2bd44a5229455"
 
 ignore@^3.3.3:
   version "3.3.7"
@@ -3712,8 +3713,8 @@ is-path-cwd@^1.0.0:
   resolved "https://registry.yarnpkg.com/is-path-cwd/-/is-path-cwd-1.0.0.tgz#d225ec23132e89edd38fda767472e62e65f1106d"
 
 is-path-in-cwd@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/is-path-in-cwd/-/is-path-in-cwd-1.0.0.tgz#6477582b8214d602346094567003be8a9eac04dc"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/is-path-in-cwd/-/is-path-in-cwd-1.0.1.tgz#5ac48b345ef675339bd6c7a48a912110b241cf52"
   dependencies:
     is-path-inside "^1.0.0"
 
@@ -4341,7 +4342,7 @@ locate-path@^2.0.0:
 
 lodash-es@^4.2.1:
   version "4.17.7"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/lodash-es/-/lodash-es-4.17.7.tgz#db240a3252c3dd8360201ac9feef91ac977ea856"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.7.tgz#db240a3252c3dd8360201ac9feef91ac977ea856"
 
 lodash._reinterpolate@~3.0.0:
   version "3.0.0"
@@ -4410,12 +4411,12 @@ lower-case@^1.1.1:
   resolved "https://registry.yarnpkg.com/lower-case/-/lower-case-1.1.4.tgz#9a2cabd1b9e8e0ae993a4bf7d5875c39c42e8eac"
 
 lowercase-keys@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.0.tgz#4e3366b39e7f5457e35f1324bdf6f88d0bfc7306"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"
 
 lowlight@~1.9.1:
   version "1.9.1"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/lowlight/-/lowlight-1.9.1.tgz#ed7c3dffc36f8c1f263735c0fe0c907847c11250"
+  resolved "https://registry.yarnpkg.com/lowlight/-/lowlight-1.9.1.tgz#ed7c3dffc36f8c1f263735c0fe0c907847c11250"
   dependencies:
     highlight.js "~9.12.0"
 
@@ -4530,8 +4531,8 @@ micromatch@^2.1.5, micromatch@^2.3.11:
     regex-cache "^0.4.2"
 
 micromatch@^3.1.4, micromatch@^3.1.8:
-  version "3.1.9"
-  resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-3.1.9.tgz#15dc93175ae39e52e93087847096effc73efcf89"
+  version "3.1.10"
+  resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-3.1.10.tgz#70859bc95c9840952f359a068a3fc49f9ecfac23"
   dependencies:
     arr-diff "^4.0.0"
     array-unique "^0.3.2"
@@ -4545,7 +4546,7 @@ micromatch@^3.1.4, micromatch@^3.1.8:
     object.pick "^1.3.0"
     regex-not "^1.0.0"
     snapdragon "^0.8.1"
-    to-regex "^3.0.1"
+    to-regex "^3.0.2"
 
 miller-rabin@^4.0.0:
   version "4.0.1"
@@ -5446,8 +5447,8 @@ postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0
     supports-color "^3.2.3"
 
 postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.13:
-  version "6.0.20"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.20.tgz#686107e743a12d5530cb68438c590d5b2bf72c3c"
+  version "6.0.21"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.21.tgz#8265662694eddf9e9a5960db6da33c39e4cd069d"
   dependencies:
     chalk "^2.3.2"
     source-map "^0.6.1"
@@ -5485,13 +5486,13 @@ pretty-format@^20.0.3:
 
 prismjs@^1.8.4:
   version "1.13.0"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/prismjs/-/prismjs-1.13.0.tgz#edcc14a90bbd72a03e5ffd2bab81a04c79a607a6"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.13.0.tgz#edcc14a90bbd72a03e5ffd2bab81a04c79a607a6"
   optionalDependencies:
     clipboard "^2.0.0"
 
 prismjs@~1.10.0:
   version "1.10.0"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/prismjs/-/prismjs-1.10.0.tgz#77e5187c2ae6b3253fcc313029cf25fe53778721"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.10.0.tgz#77e5187c2ae6b3253fcc313029cf25fe53778721"
   optionalDependencies:
     clipboard "^1.7.1"
 
@@ -5533,7 +5534,7 @@ prop-types@^15.5.10, prop-types@^15.6.0:
 
 property-information@^3.0.0:
   version "3.2.0"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/property-information/-/property-information-3.2.0.tgz#fd1483c8fbac61808f5fe359e7693a1f48a58331"
+  resolved "https://registry.yarnpkg.com/property-information/-/property-information-3.2.0.tgz#fd1483c8fbac61808f5fe359e7693a1f48a58331"
 
 proxy-addr@~2.0.3:
   version "2.0.3"
@@ -5567,6 +5568,10 @@ punycode@1.3.2:
 punycode@^1.2.4, punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
+
+punycode@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.0.tgz#5f863edc89b96db09074bad7947bf09056ca4e7d"
 
 q@^1.1.2:
   version "1.5.1"
@@ -5653,7 +5658,7 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
 
 react-axe@^2.1.9:
   version "2.1.9"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/react-axe/-/react-axe-2.1.9.tgz#fc2c9ab3b304f7ffc0d5c07be0c1972033680355"
+  resolved "https://registry.yarnpkg.com/react-axe/-/react-axe-2.1.9.tgz#fc2c9ab3b304f7ffc0d5c07be0c1972033680355"
   dependencies:
     axe-core "^2.6.0"
 
@@ -5739,7 +5744,7 @@ react-scripts@1.1.1:
 
 react-syntax-highlighter@^6.1.1:
   version "6.1.2"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/react-syntax-highlighter/-/react-syntax-highlighter-6.1.2.tgz#a6fd152400139dedf50dcad5e05fc07e054b4b94"
+  resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-6.1.2.tgz#a6fd152400139dedf50dcad5e05fc07e054b4b94"
   dependencies:
     babel-runtime "^6.18.0"
     highlight.js "~9.12.0"
@@ -5845,7 +5850,7 @@ reduce-function-call@^1.0.1:
 
 redux@^3.7.2:
   version "3.7.2"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
   dependencies:
     lodash "^4.2.1"
     lodash-es "^4.2.1"
@@ -5854,7 +5859,7 @@ redux@^3.7.2:
 
 refractor@^2.0.0:
   version "2.3.0"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/refractor/-/refractor-2.3.0.tgz#b8cade8f88020f8836ca3622c6ef87fd2444d76a"
+  resolved "https://registry.yarnpkg.com/refractor/-/refractor-2.3.0.tgz#b8cade8f88020f8836ca3622c6ef87fd2444d76a"
   dependencies:
     hastscript "^3.1.0"
     prismjs "~1.10.0"
@@ -6084,7 +6089,7 @@ ret@~0.1.10:
 
 rgb-hex@^2.1.0:
   version "2.1.0"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/rgb-hex/-/rgb-hex-2.1.0.tgz#c773c5fe2268a25578d92539a82a7a5ce53beda6"
+  resolved "https://registry.yarnpkg.com/rgb-hex/-/rgb-hex-2.1.0.tgz#c773c5fe2268a25578d92539a82a7a5ce53beda6"
 
 right-align@^0.1.1:
   version "0.1.3"
@@ -6159,7 +6164,7 @@ select-hose@^2.0.0:
 
 select@^1.1.2:
   version "1.1.2"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
+  resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
 
 selfsigned@^1.9.1:
   version "1.10.2"
@@ -6405,7 +6410,7 @@ source-map@^0.6.1, source-map@~0.6.1:
 
 space-separated-tokens@^1.0.0:
   version "1.1.1"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/space-separated-tokens/-/space-separated-tokens-1.1.1.tgz#9695b9df9e65aec1811d4c3f9ce52520bc2f7e4d"
+  resolved "https://registry.yarnpkg.com/space-separated-tokens/-/space-separated-tokens-1.1.1.tgz#9695b9df9e65aec1811d4c3f9ce52520bc2f7e4d"
   dependencies:
     trim "0.0.1"
 
@@ -6432,8 +6437,8 @@ spdx-license-ids@^3.0.0:
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.0.tgz#7a7cd28470cc6d3a1cfe6d66886f6bc430d3ac87"
 
 spdy-transport@^2.0.18:
-  version "2.0.20"
-  resolved "https://registry.yarnpkg.com/spdy-transport/-/spdy-transport-2.0.20.tgz#735e72054c486b2354fe89e702256004a39ace4d"
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/spdy-transport/-/spdy-transport-2.1.0.tgz#4bbb15aaffed0beefdd56ad61dbdc8ba3e2cb7a1"
   dependencies:
     debug "^2.6.8"
     detect-node "^2.0.3"
@@ -6660,7 +6665,7 @@ sw-toolbox@^3.4.0:
 
 symbol-observable@^1.0.3:
   version "1.2.0"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
 symbol-tree@^3.2.1:
   version "3.2.2"
@@ -6668,7 +6673,7 @@ symbol-tree@^3.2.1:
 
 tabbable@^1.0.3:
   version "1.1.2"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/tabbable/-/tabbable-1.1.2.tgz#b171680aea6e0a3e9281ff23532e2e5de11c0d94"
+  resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-1.1.2.tgz#b171680aea6e0a3e9281ff23532e2e5de11c0d94"
 
 table@^4.0.1:
   version "4.0.3"
@@ -6754,7 +6759,7 @@ timers-browserify@^2.0.4:
 
 tiny-emitter@^2.0.0:
   version "2.0.2"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/tiny-emitter/-/tiny-emitter-2.0.2.tgz#82d27468aca5ade8e5fd1e6d22b57dd43ebdfb7c"
+  resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.0.2.tgz#82d27468aca5ade8e5fd1e6d22b57dd43ebdfb7c"
 
 tmp@^0.0.33:
   version "0.0.33"
@@ -6787,7 +6792,7 @@ to-regex-range@^2.1.0:
     is-number "^3.0.0"
     repeat-string "^1.6.1"
 
-to-regex@^3.0.1:
+to-regex@^3.0.1, to-regex@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/to-regex/-/to-regex-3.0.2.tgz#13cfdd9b336552f30b51f33a8ae1b42a7a7599ce"
   dependencies:
@@ -6820,7 +6825,7 @@ trim-right@^1.0.1:
 
 trim@0.0.1:
   version "0.0.1"
-  resolved "http://agora.dequecloud.com/artifactory/api/npm/dequelabs/trim/-/trim-0.0.1.tgz#5858547f6b290757ee95cccc666fb50084c460dd"
+  resolved "https://registry.yarnpkg.com/trim/-/trim-0.0.1.tgz#5858547f6b290757ee95cccc666fb50084c460dd"
 
 tty-browserify@0.0.0:
   version "0.0.0"
@@ -6942,13 +6947,14 @@ upath@^1.0.0:
   resolved "https://registry.yarnpkg.com/upath/-/upath-1.0.4.tgz#ee2321ba0a786c50973db043a50b7bcba822361d"
 
 update-notifier@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/update-notifier/-/update-notifier-2.3.0.tgz#4e8827a6bb915140ab093559d7014e3ebb837451"
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/update-notifier/-/update-notifier-2.4.0.tgz#f9b4c700fbfd4ec12c811587258777d563d8c866"
   dependencies:
     boxen "^1.2.1"
     chalk "^2.0.1"
     configstore "^3.0.0"
     import-lazy "^2.1.0"
+    is-ci "^1.0.10"
     is-installed-globally "^0.1.0"
     is-npm "^1.0.0"
     latest-version "^3.0.0"
@@ -6958,6 +6964,12 @@ update-notifier@^2.3.0:
 upper-case@^1.1.1:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/upper-case/-/upper-case-1.1.3.tgz#f6b4501c2ec4cdd26ba78be7222961de77621598"
+
+uri-js@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-3.0.2.tgz#f90b858507f81dea4dcfbb3c4c3dbfa2b557faaa"
+  dependencies:
+    punycode "^2.1.0"
 
 urijs@^1.16.1:
   version "1.19.1"
