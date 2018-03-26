@@ -28,10 +28,10 @@
 
 .any-colour-you-like {
   text-align: left;
-  padding: 2em 1em 0 1em;
-  display:flex;
-  /*align-items:flex-center;*/
-  justify-content:center;
+  padding: 2em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .any-colour-you-like button {
@@ -39,37 +39,36 @@
   margin-left:20px;
 }
 
-.any-colour-you-like .dqpl-label.inline {
-  margin-right:20px;
+.any-colour-you-like .dqpl-label {
+  margin-right: 20px;
 }
 
 .any-colour-you-like > .dqpl-field-wrap {
-  display:flex;
-  margin-bottom:0;
+  display: flex;
+}
+
+.dqpl-field-wrap {
+  margin-bottom: 0;
 }
 
 .any-colour-you-like > .dqpl-field-wrap > .dqpl-label {
-  margin-top:8px;
-}
-.inline {
-  display: inline-block;
+  margin-top: 8px;
 }
 
-.dqpl-field-wrap.inline {
-  margin-bottom:0;
+.dqpl-error-wrap {
+  position: absolute;
 }
-
 
 button.selected-color {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 400;
-    color: #666;
-    font-size: 15px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  color: #666;
+  font-size: 15px;
 }
 
 .swatch {
-    width: 10px;
-    height: 10px;
-    border: 1px solid #000;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
 }

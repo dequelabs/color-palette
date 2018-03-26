@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ColorPalette from './color-palette'
+import ColorPalette from './'
 
 test('should render a paragraph if there are no colors', () => {
   const div = document.createElement('div')

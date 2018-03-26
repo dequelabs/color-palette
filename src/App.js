@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Workspace, Button } from 'cauldron-react';
-import ColorPalette from './color-palette'
+import ColorPalette from './ColorPalette/'
 import SelectedColors from './SelectedColors/';
 import rgbHex from 'rgb-hex';
 import './App.css';
@@ -9,15 +9,19 @@ function normalizeColor(inputValue) {
   if (!inputValue || !inputValue.length) {
     throw new Error('please provide a color');
   }
+
   const span = document.createElement('span');
   document.body.appendChild(span);
   span.style.backgroundColor = inputValue;
+
   const styl = window.getComputedStyle(span);
   const bgcolor = styl.backgroundColor;
+
   if (!span.style.backgroundColor) {
     document.body.removeChild(span);
     throw new Error('please provide a valid color string')
   }
+
   document.body.removeChild(span);
   return rgbHex(bgcolor);
 }
@@ -47,8 +51,8 @@ class App extends Component {
         <Workspace>
           <form className='any-colour-you-like' onSubmit={this.addColor}>
             <div className='dqpl-field-wrap'>
-              <label className='dqpl-label inline' htmlFor='add-color'>Color (hex or rgb)</label>
-              <div className='dqpl-field-wrap inline'>
+              <label className='dqpl-label' htmlFor='add-color'>Color (hex or rgb)</label>
+              <div className='dqpl-field-wrap'>
                 <input
                   type='text'
                   id='add-color'
@@ -82,6 +86,7 @@ class App extends Component {
       if (updatedColorArray.includes(color)) {
         throw new Error('duplicate color');
       }
+
       updatedColorArray.push(color);
 
       this.setState({
@@ -110,11 +115,13 @@ class App extends Component {
     // TODO: no need to remove '#' if we store hex colors directly
     oldColor = oldColor.substring(1);
     newColor = newColor.substring(1);
+
     if (updatedColorArray.includes(newColor)) {
-       updatedColorArray.splice(updatedColorArray.indexOf(oldColor), 1);
+      updatedColorArray.splice(updatedColorArray.indexOf(oldColor), 1);
     } else {
-       updatedColorArray.splice(updatedColorArray.indexOf(oldColor), 1, newColor);
+      updatedColorArray.splice(updatedColorArray.indexOf(oldColor), 1, newColor);
     }
+
     this.setState({ colorArray: updatedColorArray });
     localStorage.setItem('colorArray', JSON.stringify(updatedColorArray));
   }
