@@ -2,31 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 import {suggestColors} from 'a11y-color';
+import hexRgb from 'hex-rgb';
 var axe = require('axe-core');
 
 function getColor(hex) {
-	var i = 0
-	var chars = hex.toUpperCase().split('');
-	chars = chars.map((c) => {
-		if (c >= '0' && c <= '9') {
-			return c - '0';
-		} else if (c === 'A') {
-			return 10;
-		} else if (c === 'B') {
-			return 11;
-		} else if (c === 'C') {
-			return 12;
-		} else if (c === 'D') {
-			return 13;
-		} else if (c === 'E') {
-			return 14;
-		}
-		return 15
-	});
-	var red = chars[i++]*16 + chars[i++]
-	var green = chars[i++]*16 + chars[i++]
-	var blue = chars[i++]*16 + chars[i++]
-	return new axe.commons.color.Color(red, green, blue, 1);
+	const { red, green, blue, alpha } = hexRgb(hex);
+	return new axe.commons.color.Color(red, green, blue, alpha/255
+	);
 }
 
 function getColorRows(combos, onColorSuggestion) {
@@ -48,11 +30,11 @@ function getColorRows(combos, onColorSuggestion) {
 		<td>
 			{ `${(contrast >= 3.0 ? '\u2714' : '\u2718')}  (${contrast.toFixed(2)}:1)` }
 		</td>
-                <td>
-                        { contrast >= 3.0 && contrast < 4.5 ?
-                          generateSuggestedSwatch(fgColor, bgColor, onColorSuggestion) :
-                          "" }
-                </td>
+      <td>
+        { contrast >= 3.0 && contrast < 4.5 ?
+          generateSuggestedSwatch(fgColor, bgColor, onColorSuggestion) :
+          "" }
+      </td>
 		</tr>
 	});
 }
