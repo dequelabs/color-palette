@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 import {suggestColors} from 'a11y-color';
-import hexRgb from 'hex-rgb';
+import hexRgb from './hex-rgb.js';
 var axe = require('axe-core');
 
 function getColor(hex) {
