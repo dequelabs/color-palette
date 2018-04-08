@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Workspace, Button } from 'cauldron-react';
 import ColorPalette from './color-palette'
 import SelectedColors from './SelectedColors/';
-import rgbHex from 'rgb-hex';
+import rgbHex from './rgb-hex.js';
 import './App.css';
 
 function normalizeColor(inputValue) {
