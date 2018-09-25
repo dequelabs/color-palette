@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+a11y-color@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/a11y-color/-/a11y-color-0.0.8.tgz#cf73631aebe40d7187aa781e47e619c270f35385"
+  dependencies:
+    core-js "^0.9.13"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://agora.dequecloud.com/artifactory/api/npm/dequelabs/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -1698,6 +1704,10 @@ cookie@0.3.1:
 copy-descriptor@^0.1.0:
   version "0.1.1"
   resolved "https://agora.dequecloud.com/artifactory/api/npm/dequelabs/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
+
+core-js@^0.9.13:
+  version "0.9.18"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-0.9.18.tgz#13f458e430232b0f4ec1f480da7c2f5288e9d095"
 
 core-js@^2.4.0, core-js@^2.5.0:
   version "2.5.7"

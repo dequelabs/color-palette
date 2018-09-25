@@ -5,18 +5,19 @@ import './Swatch.css';
 export default function Swatch({ color, number, children }) {
   return (
     <div className='swatch' style={{ backgroundColor: color }}>
-      <div className='swatch-id'>{number}</div>
+      {number && (<div className='swatch-id'>{number}</div>)}
       {children}
     </div>
   );
 }
 
 Swatch.defaultProps = {
-  children: null
+  children: null,
+  number: null
 };
 
 Swatch.propTypes = {
   color: PropTypes.string.isRequired,
-  number: PropTypes.number.isRequired,
+  number: PropTypes.number,
   children: PropTypes.node
 };

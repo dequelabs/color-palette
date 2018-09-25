@@ -25,15 +25,38 @@
 }
 
 .color-combos .combo-row {
-  padding: 10px 0;
+  padding: 0px 0 25px 0;
   border-bottom: 1px solid #ccc;
-}
-
-.color-combos .combo-row {
-  margin: 25px 0;
+  margin: 25px 0 0;
   justify-content: flex-start;
 }
 
 .row.res-row {
   margin: 0;
+}
+
+.color-combos .suggestion {
+  height: 200px;
+  width: 200px;
+  border-left: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-left: auto;
+}
+
+.color-combos .suggestion h3 {
+  font-weight: 400;
+}
+
+.color-combos .suggestion .swatch {
+  width: 50px;
+  height: 50px;
+  flex: 1 0 auto;
+}
+
+.suggestion .spec {
+  margin-top: 5px;
 }
