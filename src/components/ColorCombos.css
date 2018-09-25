@@ -1,0 +1,62 @@
+.color-combos {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.color-combos .fa {
+  font-size: 36px;
+  color: #4d4d4d;
+  margin: 0 25px;
+}
+
+.color-combos .fa.fa-pause {
+  transform: rotate(90deg);
+  font-size: 30px;
+}
+
+.color-combos .fa.fa-check-circle {
+  color: #009245;
+}
+
+.color-combos .fa.fa-close {
+  color: #d93251;
+}
+
+.color-combos .combo-row {
+  padding: 0px 0 25px 0;
+  border-bottom: 1px solid #ccc;
+  margin: 25px 0 0;
+  justify-content: flex-start;
+}
+
+.row.res-row {
+  margin: 0;
+}
+
+.color-combos .suggestion {
+  height: 200px;
+  width: 200px;
+  border-left: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-left: auto;
+}
+
+.color-combos .suggestion h3 {
+  font-weight: 400;
+}
+
+.color-combos .suggestion .swatch {
+  width: 50px;
+  height: 50px;
+  flex: 1 0 auto;
+}
+
+.suggestion .spec {
+  margin-top: 5px;
+}

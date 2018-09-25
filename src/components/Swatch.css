@@ -1,0 +1,30 @@
+.swatch {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: fade;
+  padding: 10px;
+}
+
+.palette > ul > li:not(:first-of-type) .swatch {
+  border-left: none;
+}
+
+.swatch .swatch-id {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f2f2;
+  color: #666666;
+  width: 36px;
+  height: 36px;
+  top: 8px;
+  left: 8px;
+  border: 1px solid #333333;
+}

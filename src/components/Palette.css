@@ -1,0 +1,63 @@
+.no-colors {
+  font-size: 24px;
+}
+
+.no-colors, .palette ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  width: 1000px;
+  height: 514px;
+}
+
+.palette h3 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.palette li {
+  background: #f2f2f2;
+}
+
+.palette .fields {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.palette > ul > li:not(:first-of-type) .fields {
+  border-left: none;
+}
+
+.remove-color {
+  background: transparent;
+  margin-left: auto;
+}
+
+.rgba-inputs {
+  margin-top: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.rgba-inputs input {
+  width: 30px;
+  min-width: 30px;
+  max-width: 30px;
+  font-size: 11px;
+  margin: 7px;
+}
+
+.rgba-inputs label {
+  width: auto;
+  text-align: left;
+  margin: 0 0 0 12px;
+}
+
+.hex-input input {
+  width: 175px;
+  min-width: 175px;
+  max-width: 175px;
+}

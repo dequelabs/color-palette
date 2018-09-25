@@ -3,23 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axe-core": "^3.0.0",
-    "cauldron-react": "0.0.3",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1",
-    "react-test-renderer": "^16.3.0"
+    "a11y-color": "^0.0.8",
+    "axe-core": "^3.1.2",
+    "cauldron-react": "^0.1.0",
+    "classnames": "^2.2.6",
+    "css-color-checker": "^1.4.0",
+    "css-color-converter": "^1.1.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-offscreen": "^1.0.3",
+    "react-scripts": "1.1.5",
+    "unstated": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "a11y-color": "0.0.8",
-    "react-axe": "^2.1.9"
   }
 }
