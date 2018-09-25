@@ -1,0 +1,39 @@
+.color-combos {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.color-combos .fa {
+  font-size: 36px;
+  color: #4d4d4d;
+  margin: 0 25px;
+}
+
+.color-combos .fa.fa-pause {
+  transform: rotate(90deg);
+  font-size: 30px;
+}
+
+.color-combos .fa.fa-check-circle {
+  color: #009245;
+}
+
+.color-combos .fa.fa-close {
+  color: #d93251;
+}
+
+.color-combos .combo-row {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.color-combos .combo-row {
+  margin: 25px 0;
+  justify-content: flex-start;
+}
+
+.row.res-row {
+  margin: 0;
+}

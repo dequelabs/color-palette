@@ -1,0 +1,71 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.row {
+  align-items: center;
+  justify-content: center;
+}
+
+.row [type='submit'] {
+  margin: 0 0 12px 12px;
+}
+
+body .dqpl-layout {
+  overflow: auto;
+}
+
+body .dqpl-main-content {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+body .dqpl-main-content h1 {
+  font-size: 56px;
+  color: #0b0e11;
+  font-weight: 300;
+  border-bottom: 1px solid #f2f2f2;
+  margin-bottom: 25px;
+}
+
+body .dqpl-main-content h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #4d4d4d;
+}
+
+body .dqpl-top-bar > ul {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+body .dqpl-top-bar > ul li:first-child {
+  border-left: 1px solid #5a6268;
+}
+
+body .dqpl-top-bar > ul li:last-child {
+  border-left: 1px solid #5a6268;
+  border-right: 1px solid #5a6268;
+}
+
+.dqpl-error-wrap {
+  position: absolute;
+}
+
+[role=textbox], [role=textbox]:hover {
+  border: 0;
+  margin: 0;
+}
+
+.dqpl-combobox {
+  background: #fff;
+}
