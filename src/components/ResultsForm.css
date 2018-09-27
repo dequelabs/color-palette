@@ -1,0 +1,23 @@
+.results form {
+  background-color: #f2f2f2;
+  padding: 12px 4px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.results .dqpl-field-wrap {
+  margin: 0 8px;
+}
+
+.results .dqpl-select .font-size-select {
+  width: 75px;
+}
+
+.results .dqpl-select .font-weight-select {
+  width: 125px;
+}
+
+.results .dqpl-checkbox-wrap {
+  align-self: flex-end;
+  margin-bottom: 3px;
+}
