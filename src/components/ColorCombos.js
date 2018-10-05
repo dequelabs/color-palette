@@ -25,7 +25,6 @@ export default class ColorCombos extends Component {
 
             // for each background color -> pair it with each foreground color
             const combos = backgrounds.map(bg => {
-              // TODO: the existing one divides alpha by 255...is that needed here?
               const bgColor = new axe.commons.color.Color(...bg.rgba);
 
               return texts
@@ -40,7 +39,7 @@ export default class ColorCombos extends Component {
                     AA: cutoff
                   });
                   const suggestion = suggestedColor && suggestedColor['AA'];
-                  const { rgba } = suggestion && getAllColorTypes(suggestion.fg);
+                  const { rgba, hex } = suggestion && getAllColorTypes(suggestion.fg);
 
                   return (
                     <li
@@ -78,7 +77,7 @@ export default class ColorCombos extends Component {
                         </div>
                       </div>
                       {
-                        !pass && suggestion && suggestion !== fg.hex && (
+                        !pass && suggestion && hex !== fg.hex && (
                           <div className='suggestion'>
                             <h3>Suggestion</h3>
                             <Swatch color={suggestion.fg} />

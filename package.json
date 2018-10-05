@@ -5,14 +5,14 @@
   "dependencies": {
     "a11y-color": "^0.0.8",
     "axe-core": "^3.1.2",
-    "cauldron-react": "^0.1.0",
+    "cauldron-react": "^0.1.1",
     "classnames": "^2.2.6",
     "css-color-checker": "^1.4.0",
     "css-color-converter": "^1.1.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-offscreen": "^1.0.3",
-    "react-scripts": "1.1.5",
+    "react-scripts": "^2.0.1",
     "unstated": "^2.1.1"
   },
   "scripts": {
@@ -20,5 +20,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
