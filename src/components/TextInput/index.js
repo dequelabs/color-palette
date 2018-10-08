@@ -22,11 +22,13 @@ export default class TextInput extends Component {
     }
 
     return (
-      <div className='dqpl-field-wrap'>
-        <label htmlFor={id} className='dqpl-label'>{labelText}</label>
+      <div className="dqpl-field-wrap">
+        <label htmlFor={id} className="dqpl-label">
+          {labelText}
+        </label>
         <input
           id={id}
-          type='text'
+          type="text"
           className={classNames('dqpl-text-input', className, {
             'dqpl-error': error
           })}
@@ -35,7 +37,7 @@ export default class TextInput extends Component {
           {...other}
         />
         {error && (
-          <div className='dqpl-error-wrap' id={errorId}>
+          <div className="dqpl-error-wrap" id={errorId}>
             {error}
           </div>
         )}
