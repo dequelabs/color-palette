@@ -2,7 +2,8 @@
   font-size: 24px;
 }
 
-.no-colors, .palette ul {
+.no-colors,
+.palette ul {
   list-style: none;
   display: flex;
   justify-content: center;

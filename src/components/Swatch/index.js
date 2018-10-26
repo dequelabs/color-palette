@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Swatch.css';
+import './index.css';
 
 export default function Swatch({ color, number, children }) {
   return (
-    <div className='swatch' style={{ backgroundColor: color }}>
-      {number && (<div className='swatch-id'>{number}</div>)}
+    <div className="swatch" style={{ backgroundColor: color }}>
+      {number && <div className="swatch-id">{number}</div>}
       {children}
     </div>
   );

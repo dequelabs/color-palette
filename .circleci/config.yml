@@ -17,5 +17,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      - run: yarn lint
       # run the production build
       - run: yarn build
