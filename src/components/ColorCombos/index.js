@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Subscribe } from 'unstated';
 import classNames from 'classnames';
-import Offscreen from 'react-offscreen';
 import PaletteContainer from '../../containers/PaletteContainer';
 import Swatch from '../Swatch';
 import { getCombos } from '../../utils/colors';
@@ -18,17 +17,22 @@ export default class ColorCombos extends Component {
               const property = results.groupBy === 'background' ? 'bg' : 'fg';
               return a[property].hex > b[property].hex;
             })
-            .map(({ fg, bg, contrast, rgba, hex, suggestion, pass }) => (
+            .map(({ fg, bg, contrast, rgba, hex, suggestion, pass }, i) => (
               <li
                 className="row combo-row"
                 key={`${fg.originalIndex}-${bg.originalIndex}`}
               >
-                <Swatch color={fg.hex} number={fg.originalIndex + 1}>
-                  <Offscreen>{`Text color (${fg.hex})`}</Offscreen>
-                </Swatch>
+                <Swatch
+                  color={fg.hex}
+                  number={fg.originalIndex + 1}
+                  type="text"
+                />
                 <div className="fa fa-plus" aria-hidden="true" />
-                <Swatch color={bg.hex} number={bg.originalIndex + 1}>
-                  <Offscreen>{`Background color (${fg.hex})`}</Offscreen>
+                <Swatch
+                  color={bg.hex}
+                  number={bg.originalIndex + 1}
+                  type="background"
+                >
                   <div
                     style={{
                       fontSize: `${(results.fontSize * 96) / 72}px`,
@@ -57,11 +61,13 @@ export default class ColorCombos extends Component {
                   suggestion &&
                   hex !== fg.hex && (
                     <div className="suggestion">
-                      <h3>Suggestion</h3>
-                      <Swatch color={suggestion.fg} />
-                      <div className="spec">{suggestion.fg}</div>
-                      <div className="spec">{`rgba(${rgba.join(', ')})`}</div>
-                      <div className="spec">{`${suggestion.contrast}:1`}</div>
+                      <h3 id={`suggestion-${i}`}>Suggestion</h3>
+                      <div role="group" aria-labelledby={`suggestion-${i}`}>
+                        <Swatch color={suggestion.fg} type="text" />
+                        <div className="spec">{suggestion.fg}</div>
+                        <div className="spec">{`rgba(${rgba.join(', ')})`}</div>
+                        <div className="spec">{`${suggestion.contrast}:1`}</div>
+                      </div>
                     </div>
                   )}
               </li>

@@ -37,7 +37,10 @@ export default class ColorForm extends Component {
   onChange = () =>
     this.setState({ inputValue: this.colorInput.value, error: '' });
 
-  handleError = msg => this.setState({ error: msg });
+  handleError = msg => {
+    this.setState({ error: msg });
+    this.colorInput.focus();
+  };
 
   render() {
     const { inputValue, error } = this.state;

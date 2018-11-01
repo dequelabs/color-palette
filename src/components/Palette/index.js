@@ -19,12 +19,8 @@ export default class Palette extends Component {
               <ul>
                 {colors.map((color, i) => (
                   <li key={`color-${i}`}>
-                    <Swatch color={color.hex} number={i + 1} />
-                    <div
-                      className="fields"
-                      role="group"
-                      aria-labelledby={`cb-label-${i}`}
-                    >
+                    <Swatch color={color.hex} number={i + 1} type="palette" />
+                    <div className="fields">
                       <div className="row">
                         <button
                           type="button"
@@ -68,32 +64,40 @@ export default class Palette extends Component {
                         />
                       </div>
                       <h3 id={`cb-label-${i}`}>This color is used as...</h3>
-                      <Checkbox
-                        label="Text"
-                        id={`text-cb-${i}`}
-                        name={`color-used-as-${i}`}
-                        checked={color.text}
-                        onClick={e => {
-                          if (!e.target.type || e.target.type !== 'checkbox') {
-                            return;
-                          }
+                      <div role="group" aria-labelledby={`cb-label-${i}`}>
+                        <Checkbox
+                          label="Text"
+                          id={`text-cb-${i}`}
+                          name={`color-used-as-${i}`}
+                          checked={color.text}
+                          onClick={e => {
+                            if (
+                              !e.target.type ||
+                              e.target.type !== 'checkbox'
+                            ) {
+                              return;
+                            }
 
-                          updateColor(i, { text: e.target.checked });
-                        }}
-                      />
-                      <Checkbox
-                        label="Background"
-                        id={`background-cb-${i}`}
-                        name={`color-used-as-${i}`}
-                        checked={color.background}
-                        onClick={e => {
-                          if (!e.target.type || e.target.type !== 'checkbox') {
-                            return;
-                          }
+                            updateColor(i, { text: e.target.checked });
+                          }}
+                        />
+                        <Checkbox
+                          label="Background"
+                          id={`background-cb-${i}`}
+                          name={`color-used-as-${i}`}
+                          checked={color.background}
+                          onClick={e => {
+                            if (
+                              !e.target.type ||
+                              e.target.type !== 'checkbox'
+                            ) {
+                              return;
+                            }
 
-                          updateColor(i, { background: e.target.checked });
-                        }}
-                      />
+                            updateColor(i, { background: e.target.checked });
+                          }}
+                        />
+                      </div>
                     </div>
                   </li>
                 ))}
