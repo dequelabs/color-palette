@@ -32,8 +32,14 @@
   border-left: none;
 }
 
-.remove-color {
+.remove-color,
+.swap-back {
   background: transparent;
+  color: #666;
+}
+
+.swap-back,
+.remove-color.no-replacement {
   margin-left: auto;
 }
 

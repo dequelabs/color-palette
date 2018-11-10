@@ -42,7 +42,11 @@ export const getCombos = (colors, results) => {
       const contrast = axe.commons.color.getContrast(bgColor, fgColor);
       // TODO: Account for bold text here
       const cutoff = results.fontSize < 18 ? 4.5 : 3;
-      const pass = contrast >= cutoff;
+      // NOTE calling `toFixed` here because a11y-colors does...
+      // This is a problem imo, #ccc and #575757 is 4.4996128
+      // however a11y-colors suggests it (and lists as 4.5:1)
+      // TODO Decide if we're cool with this toFixed-ing
+      const pass = contrast.toFixed(2) >= cutoff;
       const suggestedColor =
         !pass &&
         suggestColors(bgColor, fgColor, {
