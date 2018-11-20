@@ -2,6 +2,8 @@ import colorConverter from 'css-color-converter';
 import { suggestColors } from 'a11y-color';
 
 const axe = require('axe-core');
+const BLACK_HEX = '#000000';
+const WHITE_HEX = '#ffffff';
 
 export const getAllColorTypes = value => {
   const color = colorConverter(value);
@@ -31,6 +33,29 @@ export const getCombos = (colors, results) => {
     ...c,
     originalIndex: i
   }));
+
+  if (results.includeBlackAndWhite) {
+    const hasBlackText = colors.find(c => c.hex === BLACK_HEX);
+    const hasWhiteText = colors.find(c => c.hex === WHITE_HEX);
+    const data = { background: false, text: true };
+
+    if (!hasBlackText) {
+      palette.push({
+        ...getAllColorTypes(BLACK_HEX),
+        ...data,
+        forced: 'black'
+      });
+    }
+
+    if (!hasWhiteText) {
+      palette.push({
+        ...getAllColorTypes(WHITE_HEX),
+        ...data,
+        forced: 'white'
+      });
+    }
+  }
+
   const backgrounds = palette.filter(c => c.background);
   const texts = palette.filter(c => c.text);
 

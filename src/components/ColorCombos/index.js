@@ -12,7 +12,7 @@ export default class ColorCombos extends Component {
     return (
       <Subscribe to={[PaletteContainer]}>
         {({ state: { colors, results }, replaceColor }) => {
-          const combos = getCombos(colors, results);
+          const combos = getCombos([...colors], results);
           const comboItems = combos
             .sort((a, b) => {
               const property = results.groupBy === 'background' ? 'bg' : 'fg';
@@ -21,13 +21,28 @@ export default class ColorCombos extends Component {
             .map(({ fg, bg, contrast, rgba, hex, suggestion, pass }) => (
               <li
                 className="row combo-row"
-                key={`${fg.originalIndex}-${bg.originalIndex}`}
+                key={`${fg.forced || fg.originalIndex}-${bg.forced ||
+                  bg.originalIndex}`}
               >
-                <Swatch color={fg.hex} number={fg.originalIndex + 1}>
+                <Swatch
+                  color={fg.hex}
+                  number={
+                    typeof fg.originalIndex !== 'undefined'
+                      ? fg.originalIndex + 1
+                      : null
+                  }
+                >
                   <Offscreen>{`Text color (${fg.hex})`}</Offscreen>
                 </Swatch>
                 <div className="fa fa-plus" aria-hidden="true" />
-                <Swatch color={bg.hex} number={bg.originalIndex + 1}>
+                <Swatch
+                  color={bg.hex}
+                  number={
+                    typeof bg.originalIndex !== 'undefined'
+                      ? bg.originalIndex + 1
+                      : null
+                  }
+                >
                   <Offscreen>{`Background color (${fg.hex})`}</Offscreen>
                   <div
                     style={{
