@@ -23,29 +23,45 @@ export default class PaletteContainer extends Container {
    * Removes a color from the palette
    * @param  {Number} index the index of the color to be removed
    */
-  removeColor = index => this.setState({ colors: this.state.colors.filter((_, i) => i !== index) });
+  removeColor = index => {
+    this.setState(
+      {
+        colors: this.state.colors.map((c, i) => {
+          if (i === index) {
+            c.fadeout = true;
+          }
+          return c;
+        })
+      },
+      () => {
+        setTimeout(() => {
+          this.setState({
+            colors: this.state.colors.filter((_, i) => i !== index)
+          });
+        }, 400); // wait for fadeout
+      }
+    );
+  };
   /**
    * Updates an existing color in the palette
    * @param  {Number} index the target index
    * @param  {Object} data  the data to be updated
    */
-  updateColor = (index, data) => (
+  updateColor = (index, data) =>
     this.setState({
       colors: this.state.colors.map((color, i) => {
         if (index === i) {
-          return { ...color, ...data }
+          return { ...color, ...data };
         }
         return color;
       })
-    })
-  )
+    });
 
-  updateResultsSettings = data => (
+  updateResultsSettings = data =>
     this.setState({
       results: {
         ...this.state.results,
         ...data
       }
-    })
-  )
+    });
 }

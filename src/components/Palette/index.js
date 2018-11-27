@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Subscribe } from 'unstated';
 import { Checkbox } from 'cauldron-react';
+import classNames from 'classnames';
 import PaletteContainer from '../../containers/PaletteContainer';
 import Swatch from '../Swatch';
 import TextInput from '../TextInput';
@@ -18,7 +19,12 @@ export default class Palette extends Component {
             ) : (
               <ul>
                 {colors.map((color, i) => (
-                  <li key={`color-${i}`}>
+                  <li
+                    key={`color-${i}`}
+                    className={classNames({
+                      palette__fadeout: color.fadeout
+                    })}
+                  >
                     <Swatch color={color.hex} number={i + 1} />
                     <div
                       className="fields"

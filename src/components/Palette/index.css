@@ -20,6 +20,12 @@
 
 .palette li {
   background: #f2f2f2;
+  animation: 600ms ease-in fadein;
+}
+
+.palette li.palette__fadeout {
+  animation: 400ms ease-in fadeout;
+  opacity: 0;
 }
 
 .palette .fields {
@@ -61,4 +67,24 @@
   width: 175px;
   min-width: 175px;
   max-width: 175px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
