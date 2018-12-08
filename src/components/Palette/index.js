@@ -40,6 +40,7 @@ export default class Palette extends Component {
                         color={hex}
                         number={i + 1}
                         original={original && original.hex}
+                        type="palette"
                       />
                       <div
                         className="fields"
