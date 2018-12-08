@@ -3,14 +3,14 @@ import { Subscribe } from 'unstated';
 import classNames from 'classnames';
 import PaletteContainer from '../../containers/PaletteContainer';
 import Swatch from '../Swatch';
-import { getCombos } from '../../utils/colors';
+import { getCombos, getAllColorTypes } from '../../utils/colors';
 import './index.css';
 
 export default class ColorCombos extends Component {
   render() {
     return (
       <Subscribe to={[PaletteContainer]}>
-        {({ state: { colors, results } }) => {
+        {({ state: { colors, results }, replaceColor }) => {
           const combos = getCombos([...colors], results);
           const comboItems = combos
             .sort((a, b) => {
@@ -43,6 +43,7 @@ export default class ColorCombos extends Component {
                   type="background"
                 >
                   <div
+                    className="color-combos__sample"
                     style={{
                       fontSize: `${(results.fontSize * 96) / 72}px`,
                       color: fg.hex,
@@ -72,10 +73,21 @@ export default class ColorCombos extends Component {
                     <div className="suggestion">
                       <h3 id={`suggestion-${i}`}>Suggestion</h3>
                       <div role="group" aria-labelledby={`suggestion-${i}`}>
-                        <Swatch color={suggestion.fg} type="text" />
+                        <Swatch color={suggestion.fg} type="palette" />
                         <div className="spec">{suggestion.fg}</div>
                         <div className="spec">{`rgba(${rgba.join(', ')})`}</div>
                         <div className="spec">{`${suggestion.contrast}:1`}</div>
+                        <button
+                          className="dqpl-link"
+                          onClick={() => {
+                            replaceColor(
+                              fg.originalIndex,
+                              getAllColorTypes(suggestion.fg)
+                            );
+                          }}
+                        >
+                          replace with this color
+                        </button>
                       </div>
                     </div>
                   )}
