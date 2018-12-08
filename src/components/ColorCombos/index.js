@@ -45,6 +45,7 @@ export default class ColorCombos extends Component {
                 >
                   <Offscreen>{`Background color (${fg.hex})`}</Offscreen>
                   <div
+                    className="color-combos__sample"
                     style={{
                       fontSize: `${(results.fontSize * 96) / 72}px`,
                       color: fg.hex,

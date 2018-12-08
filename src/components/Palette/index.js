@@ -20,10 +20,22 @@ export default class Palette extends Component {
               <ul>
                 {colors.map(
                   (
-                    { hex, text, background, rgba: [r, g, b, a], original },
+                    {
+                      hex,
+                      text,
+                      background,
+                      rgba: [r, g, b, a],
+                      original,
+                      fadeout
+                    },
                     i
                   ) => (
-                    <li key={`color-${i}`}>
+                    <li
+                      key={`color-${i}`}
+                      className={classNames({
+                        palette__fadeout: fadeout
+                      })}
+                    >
                       <Swatch
                         color={hex}
                         number={i + 1}
