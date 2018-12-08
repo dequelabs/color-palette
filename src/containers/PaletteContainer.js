@@ -56,6 +56,35 @@ export default class PaletteContainer extends Container {
         return color;
       })
     });
+  /**
+   * Adds replacement property to original color
+   * @param  {Number} index    the target index
+   * @param  {Object} replace  the replacement color data
+   */
+  replaceColor = (index, replacement) =>
+    this.setState({
+      colors: this.state.colors.map((color, i) => {
+        if (i === index) {
+          return { ...color, ...replacement, original: color };
+        }
+        return color;
+      })
+    });
+
+  /**
+   * Swaps original color back in (clobbering the swapped/suggested)
+   * @param  {Number} index the target index
+   * @param  {Object} swap  the original color
+   */
+  swapColor = (index, swap) =>
+    this.setState({
+      colors: this.state.colors.map((color, i) => {
+        if (i === index) {
+          return swap;
+        }
+        return color;
+      })
+    });
 
   updateResultsSettings = data =>
     this.setState({

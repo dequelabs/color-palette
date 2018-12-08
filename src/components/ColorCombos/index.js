@@ -4,14 +4,14 @@ import classNames from 'classnames';
 import Offscreen from 'react-offscreen';
 import PaletteContainer from '../../containers/PaletteContainer';
 import Swatch from '../Swatch';
-import { getCombos } from '../../utils/colors';
+import { getCombos, getAllColorTypes } from '../../utils/colors';
 import './index.css';
 
 export default class ColorCombos extends Component {
   render() {
     return (
       <Subscribe to={[PaletteContainer]}>
-        {({ state: { colors, results } }) => {
+        {({ state: { colors, results }, replaceColor }) => {
           const combos = getCombos([...colors], results);
           const comboItems = combos
             .sort((a, b) => {
@@ -78,6 +78,17 @@ export default class ColorCombos extends Component {
                       <div className="spec">{suggestion.fg}</div>
                       <div className="spec">{`rgba(${rgba.join(', ')})`}</div>
                       <div className="spec">{`${suggestion.contrast}:1`}</div>
+                      <button
+                        className="dqpl-link"
+                        onClick={() => {
+                          replaceColor(
+                            fg.originalIndex,
+                            getAllColorTypes(suggestion.fg)
+                          );
+                        }}
+                      >
+                        replace with this color
+                      </button>
                     </div>
                   )}
               </li>
