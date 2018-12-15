@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+.results.narrow form {
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
 .results .dqpl-field-wrap {
   margin: 0 8px;
 }
@@ -20,4 +26,8 @@
 .results .dqpl-checkbox-wrap {
   align-self: flex-end;
   margin-bottom: 3px;
+}
+
+.results.narrow .dqpl-checkbox-wrap {
+  align-self: flex-end;
 }
