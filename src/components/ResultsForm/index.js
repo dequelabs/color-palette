@@ -10,8 +10,8 @@ export default class ResultsForm extends Component {
   render() {
     return (
       <Subscribe to={[PaletteContainer]}>
-        {({ updateResultsSettings, state: { results } }) => (
-          <div className="results">
+        {({ updateResultsSettings, state: { results, isWide } }) => (
+          <div className={`results ${!isWide ? 'narrow' : ''}`}>
             <h2>Results</h2>
             <form className="row" onSubmit={e => e.preventDefault()}>
               <TextInput

@@ -66,3 +66,45 @@
 .color-combos__sample {
   transition: all 700ms;
 }
+
+@media (max-width: 1034px) {
+  .color-combos .fa {
+    margin: 0 10px;
+    font-size: 25px;
+  }
+
+  .color-combos .fa.fa-pause {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 660px) {
+  .row.res-row {
+    margin: 10px auto;
+  }
+  .color-combos .suggestion {
+    flex-basis: 100%;
+    flex-direction: row;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .color-combos .suggestion h3 {
+    margin-left: 10px;
+  }
+
+  .color-combos .suggestion [role='group'] {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 0 20px;
+    align-items: center;
+  }
+
+  .color-combos .suggestion [role='group'] .swatch {
+    margin-right: 10px;
+  }
+
+  .color-combos .suggestion [role='group'] .dqpl-link {
+    margin-left: 10px;
+  }
+}

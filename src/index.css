@@ -7,7 +7,9 @@ body {
   padding: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -61,11 +63,19 @@ body .dqpl-top-bar > ul li:last-child {
   position: absolute;
 }
 
-[role=textbox], [role=textbox]:hover {
+[role='textbox'],
+[role='textbox']:hover {
   border: 0;
   margin: 0;
 }
 
 .dqpl-combobox {
   background: #fff;
+}
+
+@media (max-width: 1034px) {
+  body .dqpl-layout .dqpl-main-content {
+    width: auto;
+    margin: 0;
+  }
 }

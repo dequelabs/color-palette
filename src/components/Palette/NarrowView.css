@@ -1,0 +1,65 @@
+.palette ul[role='tablist'] {
+  border-bottom: 0;
+}
+
+[role='tablist'] li {
+  width: 20%;
+}
+
+[role='tablist'] li .swatch {
+  width: auto;
+  height: 150px;
+}
+
+[role='tablist'] [role='tab'] {
+  position: relative;
+}
+
+[role='tablist'] [role='tab']:focus {
+  outline-offset: 3px;
+}
+
+[role='tablist'] [aria-selected='true']::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 15px 17px 15px;
+  border-color: transparent transparent #f2f2f2 transparent;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+[role='tablist'] [aria-selected='true']::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 16px 18px 16px;
+  border-color: transparent transparent #ccc transparent;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.panels [role='tabpanel'] {
+  background: #f2f2f2;
+}
+
+.panels [role='tabpanel'] .fields {
+  border: 0;
+}
+
+.panels [role='tabpanel'] .fields {
+  text-align: center;
+}
+
+.panels [role='tabpanel'] .fields .used-as {
+  display: inline-block;
+  margin: 0 auto;
+}

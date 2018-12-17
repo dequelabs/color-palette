@@ -74,9 +74,15 @@ export default class ColorCombos extends Component {
                       <h3 id={`suggestion-${i}`}>Suggestion</h3>
                       <div role="group" aria-labelledby={`suggestion-${i}`}>
                         <Swatch color={suggestion.fg} type="palette" />
-                        <div className="spec">{suggestion.fg}</div>
-                        <div className="spec">{`rgba(${rgba.join(', ')})`}</div>
-                        <div className="spec">{`${suggestion.contrast}:1`}</div>
+                        <div>
+                          <div className="spec">{suggestion.fg}</div>
+                          <div className="spec">{`rgba(${rgba.join(
+                            ', '
+                          )})`}</div>
+                          <div className="spec">{`${
+                            suggestion.contrast
+                          }:1`}</div>
+                        </div>
                         <button
                           className="dqpl-link"
                           onClick={() => {

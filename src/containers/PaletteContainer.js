@@ -1,5 +1,7 @@
 import { Container } from 'unstated';
 
+const MIN_WIDTH = 1034;
+const isWindowWide = () => window.innerWidth >= MIN_WIDTH;
 const initialState = {
   colors: [],
   results: {
@@ -9,11 +11,27 @@ const initialState = {
     groupBy: 'background',
     includeBlackAndWhite: false,
     combinations: []
-  }
+  },
+  isWide: isWindowWide()
 };
 
 export default class PaletteContainer extends Container {
   state = initialState;
+
+  constructor() {
+    super();
+    window.addEventListener('resize', this.onResize);
+  }
+
+  onResize = () => {
+    const wasWide = this.state.isWide;
+    const isWide = isWindowWide();
+
+    if (wasWide !== isWide) {
+      this.setState({ isWide });
+    }
+  };
+
   /**
    * Adds a new color to the pallete
    * @param {Object} data An object containing: hex, rgba, type (background or text)
