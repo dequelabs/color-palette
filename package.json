@@ -22,7 +22,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "release": "standard-version",
-    "postrelease": "gh-pages -d build",
+    "postrelease": "npm run deploy",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
