@@ -1,7 +1,7 @@
 {
   "name": "color-palette",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://dequelabs.github.io/color-palette",
   "dependencies": {
     "a11y-color": "^0.0.8",
     "axe-core": "^3.1.2",
@@ -20,7 +20,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "release": "standard-version",
+    "postrelease": "npm run deploy",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",
@@ -51,8 +55,10 @@
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
+    "gh-pages": "^2.0.1",
     "husky": "^1.1.1",
     "lint-staged": "^7.3.0",
-    "prettier": "^1.14.3"
+    "prettier": "^1.14.3",
+    "standard-version": "^4.4.0"
   }
 }
