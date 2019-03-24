@@ -9,9 +9,13 @@ export default class WideView extends Component {
   render() {
     return (
       <Subscribe to={[PaletteContainer]}>
-        {({ state: { colors } }) =>
+        {({ state: { colors }, setListRef }) =>
           !!colors.length && (
-            <ul>
+            <ul
+              tabIndex={-1}
+              aria-labelledby="palette-heading"
+              ref={setListRef}
+            >
               {colors.map((color, i) => (
                 <li
                   key={`color-${i}`}

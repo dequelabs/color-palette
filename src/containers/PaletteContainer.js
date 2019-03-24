@@ -17,11 +17,15 @@ const initialState = {
 
 export default class PaletteContainer extends Container {
   state = initialState;
+  items = [];
 
   constructor() {
     super();
     window.addEventListener('resize', this.onResize);
   }
+
+  setListRef = el => (this.list = el);
+  setItem = (el, i) => (this.items[i] = el);
 
   onResize = () => {
     const wasWide = this.state.isWide;
@@ -56,6 +60,10 @@ export default class PaletteContainer extends Container {
           this.setState({
             colors: this.state.colors.filter((_, i) => i !== index)
           });
+
+          if (this.state.isWide && this.list) {
+            this.list.focus();
+          }
         }, 400); // wait for fadeout
       }
     );
@@ -94,7 +102,7 @@ export default class PaletteContainer extends Container {
    * @param  {Number} index the target index
    * @param  {Object} swap  the original color
    */
-  swapColor = (index, swap) =>
+  swapColor = (index, swap) => {
     this.setState({
       colors: this.state.colors.map((color, i) => {
         if (i === index) {
@@ -103,6 +111,11 @@ export default class PaletteContainer extends Container {
         return color;
       })
     });
+
+    if (this.items[index]) {
+      this.items[index].focus();
+    }
+  };
 
   updateResultsSettings = data =>
     this.setState({

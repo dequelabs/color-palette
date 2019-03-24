@@ -22,6 +22,8 @@ export default class ColorCombos extends Component {
                 className="row combo-row"
                 key={`${fg.forced || fg.originalIndex}-${bg.forced ||
                   bg.originalIndex}`}
+                tabIndex={-1}
+                ref={el => (this.listItem = el)}
               >
                 <Swatch
                   color={fg.hex}
@@ -90,6 +92,8 @@ export default class ColorCombos extends Component {
                               fg.originalIndex,
                               getAllColorTypes(suggestion.fg)
                             );
+
+                            this.listItem.focus();
                           }}
                         >
                           replace with this color

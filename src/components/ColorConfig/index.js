@@ -28,13 +28,15 @@ export default class ColorConfig extends Component {
     return (
       <Subscribe to={[PaletteContainer, TabsContainer]}>
         {(
-          { updateColor, swapColor, removeColor, state: { isWide } },
+          { updateColor, swapColor, removeColor, state: { isWide }, setItem },
           { onDelete }
         ) => (
           <div
             className="fields"
             role="group"
             aria-labelledby={`cb-label-${i}`}
+            tabIndex={-1}
+            ref={el => setItem(el, i)}
           >
             <div className="row">
               {original && (

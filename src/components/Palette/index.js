@@ -10,7 +10,9 @@ export default function Pallette() {
     <Subscribe to={[PaletteContainer]}>
       {({ state: { isWide, colors } }) => (
         <Fragment>
-          <h2>{`Palette (${colors.length} of 5 colors added)`}</h2>
+          <h2 id="palette-heading">
+            {`Palette (${colors.length} of 5 colors added)`}
+          </h2>
           <div className="palette">
             {!colors.length && (
               <div className={`no-colors ${!isWide ? 'narrow' : ''}`}>
