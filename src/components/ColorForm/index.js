@@ -42,6 +42,12 @@ export default class ColorForm extends Component {
     this.colorInput.focus();
   };
 
+  onClick = () => {
+    if (this.colorInput) {
+      this.colorInput.focus();
+    }
+  };
+
   render() {
     const { inputValue, error } = this.state;
 
@@ -66,6 +72,7 @@ export default class ColorForm extends Component {
                 type="submit"
                 disabled={!inputValue || colors.length === 5}
                 aria-disabled={!inputValue || colors.length === 5}
+                onClick={this.onClick}
               >
                 Add Color
               </Button>

@@ -11,7 +11,7 @@ export default function Pallette() {
       {({ state: { isWide, colors } }) => (
         <Fragment>
           <h2 id="palette-heading">
-            {`Palette (${colors.length} of 5 colors added)`}
+            Palette ({colors.length} of 5 colors added)
           </h2>
           <div className="palette">
             {!colors.length && (

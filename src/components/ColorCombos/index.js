@@ -7,6 +7,7 @@ import { getCombos, getAllColorTypes } from '../../utils/colors';
 import './index.css';
 
 export default class ColorCombos extends Component {
+  listItemRef = el => (this.listItem = el);
   render() {
     return (
       <Subscribe to={[PaletteContainer]}>
@@ -93,7 +94,9 @@ export default class ColorCombos extends Component {
                               getAllColorTypes(suggestion.fg)
                             );
 
-                            this.listItem.focus();
+                            if (this.listItem) {
+                              this.listItem.focus();
+                            }
                           }}
                         >
                           replace with this color
