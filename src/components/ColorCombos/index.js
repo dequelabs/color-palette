@@ -24,7 +24,7 @@ export default class ColorCombos extends Component {
                 key={`${fg.forced || fg.originalIndex}-${bg.forced ||
                   bg.originalIndex}`}
                 tabIndex={-1}
-                ref={el => (this.listItem = el)}
+                ref={this.listItemRef}
               >
                 <Swatch
                   color={fg.hex}
