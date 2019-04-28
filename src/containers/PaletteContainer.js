@@ -29,8 +29,8 @@ export default class PaletteContainer extends Container {
 
   setStateAndStorage = (data, cb = () => {}) => {
     this.setState(data, () => {
-      cb();
       localStorage.setItem(STATE_KEY, JSON.stringify(this.state));
+      cb();
     });
   };
 
