@@ -28,7 +28,7 @@ export default class ColorForm extends Component {
       this.colorInput.value = '';
       this.setState({ inputValue: '' });
 
-      return addColor({ ...data, background: true, text: false });
+      return addColor({ ...data, background: true, text: true });
     }
 
     this.handleError('Enter a valid hex, rgb, or rgba color');
