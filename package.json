@@ -1,7 +1,6 @@
 {
   "name": "color-palette",
   "version": "0.1.0",
-  "homepage": "https://dequelabs.github.io/color-palette",
   "dependencies": {
     "a11y-color": "^0.0.8",
     "axe-core": "^3.1.2",
