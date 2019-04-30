@@ -7,6 +7,7 @@ import { getCombos, getAllColorTypes } from '../../utils/colors';
 import './index.css';
 
 export default class ColorCombos extends Component {
+  listItemRef = el => (this.listItem = el);
   render() {
     return (
       <Subscribe to={[PaletteContainer]}>
@@ -22,6 +23,8 @@ export default class ColorCombos extends Component {
                 className="row combo-row"
                 key={`${fg.forced || fg.originalIndex}-${bg.forced ||
                   bg.originalIndex}`}
+                tabIndex={-1}
+                ref={this.listItemRef}
               >
                 <Swatch
                   color={fg.hex}
@@ -90,6 +93,10 @@ export default class ColorCombos extends Component {
                               fg.originalIndex,
                               getAllColorTypes(suggestion.fg)
                             );
+
+                            if (this.listItem) {
+                              this.listItem.focus();
+                            }
                           }}
                         >
                           replace with this color

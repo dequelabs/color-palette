@@ -21,12 +21,15 @@ const initialState = storageState
 
 export default class PaletteContainer extends Container {
   state = initialState;
+  items = [];
 
   constructor() {
     super();
     window.addEventListener('resize', this.onResize);
   }
 
+  setListRef = el => (this.list = el);
+  setItem = (el, i) => (this.items[i] = el);
   setStateAndStorage = (data, cb = () => {}) => {
     this.setState(data, () => {
       localStorage.setItem(STATE_KEY, JSON.stringify(this.state));
@@ -68,6 +71,10 @@ export default class PaletteContainer extends Container {
           this.setStateAndStorage({
             colors: this.state.colors.filter((_, i) => i !== index)
           });
+
+          if (this.state.isWide && this.list) {
+            this.list.focus();
+          }
         }, 400); // wait for fadeout
       }
     );
@@ -106,7 +113,7 @@ export default class PaletteContainer extends Container {
    * @param  {Number} index the target index
    * @param  {Object} swap  the original color
    */
-  swapColor = (index, swap) =>
+  swapColor = (index, swap) => {
     this.setStateAndStorage({
       colors: this.state.colors.map((color, i) => {
         if (i === index) {
@@ -115,6 +122,11 @@ export default class PaletteContainer extends Container {
         return color;
       })
     });
+
+    if (this.items[index]) {
+      this.items[index].focus();
+    }
+  };
 
   updateResultsSettings = data =>
     this.setStateAndStorage({
