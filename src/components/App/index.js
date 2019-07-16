@@ -24,7 +24,26 @@ export default function App() {
         </MenuItem>
       </TopBar>
       <Workspace id="main-content" tabIndex={-1}>
-        <h1>Color Palette</h1>
+        <h1>Color Palette Contrast Checker</h1>
+        <p>
+          Selecting high contrast color combinations is critical to deliver
+          accessible content. The W3C&apos;s Web Content Accessibility
+          Guidelines or WCAG, suggest that foreground text over background
+          colors meet a minimum contrast ratio. Adhering to these guidelines
+          enables all users, including people vision impairments, to enjoy your
+          content.
+        </p>
+        <h2>How to use</h2>
+        <p>
+          Import the hex or RGB color values that comprise your current color
+          palette to see where they stand against WCAG 2.0 AA color contrast
+          requirements. Indicate which colors are used for text or background
+          treatments, as well as the font size and weight. The results will
+          indicate the accessibility of your color choices. Combinations that
+          exceed a contrast ratio of 4.5:1 or greater, will pass WCAG 2.0 AA. In
+          some cases where the contrast ratio has failed to meet the guideline,
+          a similar, higher contrast replacement color will be suggested.
+        </p>
         <ColorForm />
         <Palette />
         <ResultsForm />
