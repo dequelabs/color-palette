@@ -36,11 +36,11 @@ export default function App() {
         <h2>How to use</h2>
         <p>
           Import the hex or RGB color values that comprise your current color
-          palette to see where they stand against WCAG 2.0 AA color contrast
+          palette to see where they stand against WCAG 2.1 AA color contrast
           requirements. Indicate which colors are used for text or background
           treatments, as well as the font size and weight. The results will
           indicate the accessibility of your color choices. Combinations that
-          exceed a contrast ratio of 4.5:1 or greater, will pass WCAG 2.0 AA. In
+          exceed a contrast ratio of 4.5:1 or greater, will pass WCAG 2.1 AA. In
           some cases where the contrast ratio has failed to meet the guideline,
           a similar, higher contrast replacement color will be suggested.
         </p>
