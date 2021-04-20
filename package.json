@@ -58,6 +58,6 @@
     "husky": "^1.1.1",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3",
-    "standard-version": "^4.4.0"
+    "standard-version": "^8.0.1"
   }
 }
