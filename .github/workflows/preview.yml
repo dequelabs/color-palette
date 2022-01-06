@@ -1,6 +1,8 @@
 name: PR preview
 
-on: pull_request
+on:
+  pull_request:
+    types: [closed]
 
 jobs:
   deploy:
